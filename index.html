@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#0a0a0b" />
+<title>Gabriel Oliveira — Mentor de Desenho</title>
+<meta name="description" content="Retratos e hiper-realismo. Portfólio de Gabriel Oliveira e a Mentoria REAL: acompanhamento individual para artistas que querem desenhar com precisão." />
+<meta name="author" content="Gabriel Oliveira" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Gabriel Oliveira — Mentor de Desenho" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:title" content="Gabriel Oliveira — Retratos, hiper-realismo e Mentoria REAL" />
+<meta property="og:description" content="Portfólio de retratos e hiper-realismo e a Mentoria REAL: acompanhamento individual para artistas que querem desenhar com precisão." />
+<meta property="og:image" content="art/real-01-flores.webp" />
+<meta property="og:image:alt" content="Retrato a grafite de mulher com flores no cabelo, por Gabriel Oliveira" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gabriel Oliveira — Retratos, hiper-realismo e Mentoria REAL" />
+<meta name="twitter:description" content="Portfólio de retratos e hiper-realismo e a Mentoria REAL, em São Carlos, SP." />
+<meta name="twitter:image" content="art/real-01-flores.webp" />
+<link rel="stylesheet" href="fonts.css" />
+<link rel="preload" href="fonts/inter-tight-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 18'%3E%3Cpath fill='%23f4f1ea' d='M11 0l11 18h-6.2L11 9.6 6.2 18H0z'/%3E%3C/svg%3E" />
+<style>
+:root{--bg:#0a0a0b;--ink:#f4f1ea;--mid:#8d8b86;--line:rgba(244,241,234,.14);--acc:#c9905f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth}
+body{font-family:'Inter Tight',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#track{height:640vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg)}
+.hl{position:absolute;left:0;right:0;font-weight:400;font-size:clamp(40px,6.7vw,130px);line-height:1;letter-spacing:-.055em;white-space:nowrap;text-align:center;will-change:transform}
+#l1{top:calc(50% - .98em)}
+#l2{top:calc(50% + .03em)}
+#l1 span,#l2 span{display:inline-block}
+#l1 span{margin-right:15vw}
+#l2 span{margin-left:15vw}
+#cap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:15em;text-align:center;font-size:clamp(9px,.74vw,13px);font-weight:500;line-height:1.3;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.top{position:absolute;left:32px;right:32px;top:26px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.top{justify-content:flex-start}.acts{margin-left:auto}
+#glow{position:absolute;left:0;right:0;top:0;height:42%;background:linear-gradient(rgba(244,241,234,.1),rgba(244,241,234,0))}
+#cross{position:absolute;left:32px;right:32px;top:37.5%;height:1px;background:var(--line)}
+#cross i{position:absolute;left:50%;top:-.62em;margin-left:-.3em;font:400 13px 'IBM Plex Mono',monospace;color:var(--mid);background:var(--bg);padding:0 .3em;line-height:1.2}
+.logo{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;letter-spacing:.16em}
+.logo svg{width:22px;height:18px;fill:var(--ink)}
+.acts{display:flex;align-items:center;gap:7px;pointer-events:auto}
+.acts a{display:flex;align-items:center;gap:9px;height:32px;padding:0 15px;border:1px solid rgba(244,241,234,.55);border-radius:99px;color:var(--ink);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.06em;transition:background .2s,color .2s,border-color .2s}
+.acts a:hover{background:var(--ink);color:var(--bg)}
+.acts a.pri{border-color:rgba(201,144,95,.75);color:var(--acc)}
+.acts a.pri:hover{background:var(--acc);border-color:var(--acc);color:#0a0a0b}
+.acts a i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.acts a b{display:block;width:13px;height:7px;border-top:1px solid currentColor;border-bottom:1px solid currentColor}
+#hint{position:absolute;left:50%;top:33px;transform:translateX(-50%);font:400 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--ink);padding-bottom:6px;border-bottom:1px solid var(--line);text-decoration:none}
+.bot{position:absolute;left:32px;right:32px;bottom:26px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;font-size:12.5px;line-height:1.35;pointer-events:none}
+.bot p{color:var(--ink);max-width:21em}
+.bot .mid{font:400 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em}
+.bot .mid s{text-decoration:none;color:var(--mid);margin:0 .9em}
+.bot .r{justify-self:end;display:flex;gap:12px;align-items:center;font:400 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em}
+.bot .r:after{content:"";width:22px;height:1px;background:var(--ink)}
+#rule{position:absolute;left:3.5vw;right:3.5vw;top:50%;height:1px;background:var(--line);transform-origin:left;transform:scaleX(0)}
+#name{position:absolute;left:0;top:0;padding:6px 11px;background:var(--ink);color:var(--bg);border-radius:99px;font-size:11.5px;font-weight:600;letter-spacing:.04em;pointer-events:none;opacity:0;transition:opacity .16s;white-space:nowrap}
+@media (max-width:760px){
+  .top{left:18px;right:18px;top:18px}.bot{left:18px;right:18px;bottom:18px;grid-template-columns:1fr auto}.bot .mid{display:none}
+  #hint{display:none}.bot p{max-width:17em;font-size:11px}
+  #cap{top:17%;width:20em;font-size:10px}
+  .logo{font-size:12.5px;letter-spacing:.1em;gap:7px}
+  .logo svg{width:18px;height:15px}
+  .acts a{padding:0 12px;font-size:11px;letter-spacing:.04em}
+}
+
+/* ---------- área 2: mãos em dot-matrix ---------- */
+#maos{position:relative;height:100vh;height:100svh;min-height:660px;overflow:hidden;background:#0a0a0b;color:#f4f1ea}
+#dots{position:absolute;inset:0;display:block;width:100%;height:100%}
+#maos .m-top{position:absolute;left:0;right:0;top:0;z-index:3;display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);padding:30px clamp(18px,4vw,44px) 0}
+#maos .m-brand{display:flex;align-items:center;gap:9px;margin-right:auto;color:#f4f1ea;text-decoration:none;font-size:13.5px;font-weight:600;letter-spacing:.16em}
+#maos .m-brand svg{width:20px;height:16px;fill:#f4f1ea}
+#maos .m-nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,28px);font-size:13px}
+#maos .m-nav a{color:#9d9b95;text-decoration:none;transition:color .2s}
+#maos .m-nav a:hover{color:#fff}
+#maos .m-nav a.m-pill{background:#f4f1ea;color:#0a0a0b;padding:9px 20px;border-radius:999px;font-weight:500;letter-spacing:.06em;transition:transform .25s,background .2s}
+#maos .m-nav a.m-pill:hover{transform:translateY(-1px);background:#fff;color:#0a0a0b}
+#maos .m-copy{position:absolute;left:50%;top:24.5%;transform:translateX(-50%);z-index:3;width:min(92vw,720px);text-align:center}
+#maos .m-copy h2{font-weight:500;font-size:clamp(38px,3.75vw,68px);line-height:1.04;letter-spacing:-.035em;max-width:none;color:#f4f1ea}
+#maos .m-copy h2 span{display:block}
+#maos .m-copy h2 .g{color:#8d8b86}
+#maos .m-copy h2 .k{color:#f4f1ea}
+#maos .m-sub{margin:20px auto 0;max-width:360px;color:#8d8b86;font-size:clamp(13px,1.02vw,15.5px);line-height:1.45}
+#maos .m-foot{position:absolute;left:0;right:0;bottom:clamp(24px,5vh,52px);z-index:3;display:flex;flex-wrap:wrap;justify-content:center;gap:12px clamp(20px,3.4vw,46px);padding:0 16px;color:#8d8d8d;font-size:clamp(12px,1.05vw,15px);font-weight:500;letter-spacing:-.01em}
+#maos .m-foot span{display:flex;align-items:center;gap:7px}
+#maos .m-foot svg{width:15px;height:15px;fill:currentColor}
+@media (max-width:760px){
+  #maos .m-top{padding:20px 18px 0}
+  #maos .m-nav{gap:0}
+  #maos .m-nav a:not(.m-pill){display:none}
+  #maos .m-copy{top:19%}
+  #maos .m-foot{bottom:20px;gap:10px 18px;font-size:11.5px}
+}
+
+/* ---------- sections ---------- */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.sec{position:relative;padding:clamp(72px,9vw,132px) clamp(20px,5vw,72px);border-top:1px solid var(--line);max-width:1560px;margin:0 auto}
+.label{display:block;font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:var(--mid);text-transform:uppercase;margin-bottom:26px}
+.label em{font-style:normal;color:var(--acc)}
+h2{font-weight:500;font-size:clamp(30px,4.2vw,58px);line-height:1.02;letter-spacing:-.04em;max-width:22em}
+h2 span{color:var(--mid)}
+.lead{color:var(--mid);font-size:clamp(14px,1.1vw,16.5px);line-height:1.6;max-width:36em}
+.sec-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.sec-top .lead{justify-self:end}
+@media (max-width:900px){.sec-top{grid-template-columns:1fr;align-items:start}.sec-top .lead{justify-self:start}}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--bg);padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;gap:12px;min-height:220px;transition:background .25s}
+.card:hover{background:#101011}
+.card .n{font:400 11px 'IBM Plex Mono',monospace;color:var(--acc);letter-spacing:.1em}
+.card h3{font-size:clamp(17px,1.4vw,20px);font-weight:500;letter-spacing:-.02em}
+.card p{color:var(--mid);font-size:14px;line-height:1.55;margin-top:auto}
+
+.steps{display:grid;gap:0;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:88px minmax(0,1fr) minmax(0,1.25fr);gap:clamp(16px,3vw,48px);padding:clamp(22px,2.6vw,34px) 0;border-bottom:1px solid var(--line);align-items:baseline}
+.step b{font:400 11.5px 'IBM Plex Mono',monospace;color:var(--acc);letter-spacing:.12em}
+.step h3{font-size:clamp(18px,1.9vw,26px);font-weight:500;letter-spacing:-.03em}
+.step p{color:var(--mid);font-size:14.5px;line-height:1.55;max-width:40em}
+@media (max-width:760px){.step{grid-template-columns:44px 1fr}.step p{grid-column:2}}
+
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:center}
+.split .txt p+p{margin-top:18px}
+.split figure{position:relative;overflow:hidden;border:1px solid var(--line)}
+.split figure img{display:block;width:100%;height:auto;filter:contrast(1.03)}
+.split figcaption{font:400 11px 'IBM Plex Mono',monospace;color:var(--mid);letter-spacing:.06em;padding:11px 14px;border-top:1px solid var(--line)}
+.quote{border-left:1px solid var(--acc);padding-left:22px;margin-top:28px;font-size:clamp(15px,1.3vw,18px);line-height:1.5;letter-spacing:-.01em}
+.quote small{display:block;margin-top:12px;font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--mid)}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+
+.apply{display:block;max-width:46em}
+form{display:grid;gap:18px}
+.field{display:grid;gap:8px}
+.field label{font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--mid);text-transform:uppercase}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:400 15px 'Inter Tight',sans-serif;padding:10px 0 12px;outline:none;transition:border-color .2s;border-radius:0;appearance:none}
+.field textarea{resize:vertical;min-height:86px;line-height:1.5}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink)}
+.field select option{background:#121213;color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:48px;padding:0 26px;border:1px solid var(--acc);background:var(--acc);color:#0a0a0b;border-radius:99px;font:500 13.5px 'Inter Tight',sans-serif;letter-spacing:.03em;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-1px);background:#dcab7f;border-color:#dcab7f}
+.btn.ghost{background:transparent;color:var(--ink);border-color:rgba(244,241,234,.35)}
+.btn.ghost:hover{background:rgba(244,241,234,.08);border-color:var(--ink)}
+.form-note{font:400 11.5px 'IBM Plex Mono',monospace;color:var(--mid);letter-spacing:.03em;line-height:1.6}
+#status{font-size:13px;color:var(--acc);min-height:1.2em}
+.badge{display:inline-flex;align-items:center;gap:8px;font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--mid);text-transform:uppercase}
+.badge i{width:6px;height:6px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+.contact-line{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+
+footer{border-top:1px solid var(--line);padding:34px clamp(20px,5vw,72px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;font:400 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--mid)}
+footer a{color:var(--mid);text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--ink)}
+footer .fs{display:flex;flex-wrap:wrap;gap:20px}
+footer .credits{flex-basis:100%;font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.04em;line-height:1.7;opacity:.8}
+.bot .r{pointer-events:auto;text-decoration:none;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hl{transition:none}}
+</style>
+</head>
+<body>
+
+<div id="track">
+  <main class="stage" id="stage">
+    <h1 aria-label="Realismo em cada traço">
+      <span class="hl" id="l1" aria-hidden="true"><span>REALISMO</span></span>
+      <span class="hl" id="l2" aria-hidden="true"><span>EM CADA TRAÇO</span></span>
+    </h1>
+    <div id="cap">Do primeiro esboço ao hiper-realismo, um método que se aprende.</div>
+    <div id="glow"></div>
+    <div id="cross"><i>+</i></div>
+    <div id="rule"></div>
+    <canvas id="gl"></canvas>
+    <a id="hint" href="#aplicar">AGENDAR CONVERSA &nbsp;→</a>
+    <header class="top">
+      <div class="logo"><svg viewBox="0 0 22 18"><path d="M11 0l11 18h-6.200L11 9.600 6.200 18H0z"/></svg>GABRIEL OLIVEIRA</div>
+      <nav class="acts">
+        <a href="#mentoria">MENTORIA REAL</a>
+        <a class="pri" href="#aplicar"><i></i>APLICAR</a>
+      </nav>
+    </header>
+    <footer class="bot">
+      <p>Retratos e hiper-realismo. Mentor de desenho em São Carlos, São Paulo — acompanhando artistas do primeiro traço à peça final.</p>
+      <div class="mid">RETRATO<s>/</s>HIPER-REALISMO<s>/</s>MENTORIA</div>
+      <a class="r" href="#track">VER PORTFÓLIO</a>
+    </footer>
+    <div id="name"></div>
+  </main>
+</div>
+
+<section id="maos" aria-labelledby="maos-h">
+  <canvas id="dots" aria-hidden="true"></canvas>
+  <header class="m-top">
+    <a class="m-brand" href="#track"><svg viewBox="0 0 22 18" aria-hidden="true"><path d="M11 0l11 18h-6.2L11 9.6 6.2 18H0z"/></svg>GABRIEL OLIVEIRA</a>
+    <nav class="m-nav" aria-label="Seções">
+      <a href="#mentoria">MENTORIA</a>
+      <a href="#processo">PROCESSO</a>
+      <a href="#sobre">SOBRE</a>
+      <a class="m-pill" href="#aplicar">APLICAR</a>
+    </nav>
+  </header>
+  <div class="m-copy">
+    <h2 id="maos-h"><span class="g">Reconectando</span><span class="k">o traço humano.</span></h2>
+    <p class="m-sub">A mão aprende devagar. O que muda o desenho é voltar a enxergar a forma antes da linha.</p>
+  </div>
+  <div class="m-foot">
+    <span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7"/></svg>GRAFITE</span>
+    <span><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="1"/></svg>CARVÃO</span>
+    <span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="10" r="4" fill="#0a0a0b"/></svg>RETRATO</span>
+    <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 16L8 5l3 5 2-3 5 9z"/></svg>HIPER-REALISMO</span>
+    <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2l8 4-8 4-8-4zM2 12l8 4 8-4v2l-8 4-8-4z"/></svg>SÃO CARLOS</span>
+  </div>
+</section>
+
+<section class="sec" id="mentoria">
+  <div class="sec-top">
+    <div class="reveal">
+      <span class="label">01 — <em>A MENTORIA</em></span>
+      <h2>Mentoria REAL <span>— acompanhamento individual para desenhar com precisão.</span></h2>
+    </div>
+    <p class="lead reveal">Não é um curso gravado. É um plano feito para o seu desenho: encontros diretos, correções sobre as suas peças e fundamentos na ordem em que você precisa deles.</p>
+  </div>
+  <div class="cards reveal">
+    <article class="card"><span class="n">01</span><h3>Acompanhamento individual</h3><p>Encontros ao vivo comigo para revisar o que você produziu, ajustar a rota e manter o ritmo de prática.</p></article>
+    <article class="card"><span class="n">02</span><h3>Correção de desenhos</h3><p>Leitura crítica de cada peça: proporção, valores, transições e acabamento — com o que fazer depois, em concreto.</p></article>
+    <article class="card"><span class="n">03</span><h3>Fundamentos do realismo</h3><p>Construção, luz e sombra, textura de pele, olhos e cabelo. A base que sustenta o hiper-realismo.</p></article>
+    <article class="card"><span class="n">04</span><h3>Plano de evolução</h3><p>Exercícios entre encontros, metas claras por etapa e leitura honesta da sua evolução a cada mês.</p></article>
+  </div>
+</section>
+
+<section class="sec" id="processo">
+  <div class="reveal" style="margin-bottom:clamp(32px,4vw,56px)">
+    <span class="label">02 — <em>COMO FUNCIONA</em></span>
+    <h2>Quatro passos, <span>sem atalhos.</span></h2>
+  </div>
+  <div class="steps reveal">
+    <div class="step"><b>01</b><h3>Aplicação</h3><p>Você me chama no direct do Instagram com seu nível atual, seus objetivos e um link para o que já desenhou.</p></div>
+    <div class="step"><b>02</b><h3>Diagnóstico</h3><p>Analiso seu material e identifico o que está travando a evolução: estrutura, valor ou acabamento.</p></div>
+    <div class="step"><b>03</b><h3>Plano individual</h3><p>Monto um roteiro de estudo e prática sob medida, com etapas e prazos realistas para a sua rotina.</p></div>
+    <div class="step"><b>04</b><h3>Acompanhamento</h3><p>Correções e encontros regulares até o resultado deixar de ser sorte e virar consistência.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="sobre">
+  <div class="split">
+    <figure class="reveal">
+      <img src="art/real-06-gabriel.webp" width="480" height="601" alt="Gabriel Oliveira segurando duas peças finalizadas, em um terraço com a cidade ao fundo" loading="lazy" />
+      <figcaption>Gabriel Oliveira · peças finalizadas</figcaption>
+    </figure>
+    <div class="txt reveal">
+      <span class="label">03 — <em>SOBRE</em></span>
+      <h2>Gabriel Oliveira</h2>
+      <p class="lead" style="margin-top:22px">Artista especializado em desenhos realistas, com trabalho voltado a retratos e hiper-realismo. Como mentor, ensina exatamente o caminho que percorreu: construção, valores, textura e o detalhe que faz a peça parecer viva.</p>
+      <p class="lead" style="margin-top:16px">Atende artistas de todo o Brasil a partir de São Carlos, São Paulo — em encontros individuais, com correção de desenhos e fundamentos aplicados à prática.</p>
+      <div class="quote">“O talento aparece no começo. O que sustenta o realismo é método, repetição e alguém corrigindo o seu erro no momento certo.”<small>GABRIEL OLIVEIRA · MENTOR DE DESENHO</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="aplicar">
+  <div class="apply">
+    <div class="reveal">
+      <span class="label">04 — <em>APLICAÇÃO</em></span>
+      <h2>Mentoria REAL</h2>
+      <p class="lead" style="margin-top:22px">As vagas são limitadas e a entrada é por aplicação: assim consigo acompanhar cada aluno de perto. A conversa começa pelo direct do Instagram — conte onde você está hoje e aonde quer chegar.</p>
+      <div style="margin-top:26px" class="badge"><i></i>Vagas abertas · turma em andamento</div>
+      <div class="contact-line" style="margin-top:22px">
+        <a class="btn ghost" href="https://www.instagram.com/artgabrieloliveira/" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Gabriel Oliveira · Todos os direitos reservados · São Carlos, SP</span>
+  <div class="fs">
+    <a href="https://www.instagram.com/artgabrieloliveira/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+    <a href="privacidade.html">PRIVACIDADE</a>
+    <a href="#aplicar">APLICAÇÃO</a>
+    <a href="#track">TOPO</a>
+  </div>
+  <p class="credits">Obras e imagens: Gabriel Oliveira. Tipografia Inter Tight e IBM Plex Mono (SIL Open Font License). three.js (licença MIT). Este site não usa cookies de rastreamento.</p>
+</footer>
+
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+const WORK = [
+  ['Flores no cabelo', 'art/real-01-flores.webp'],
+  ['Boné e óculos', 'art/real-03-bone.webp'],
+  ['Perfil — correntes', 'art/real-04-perfil.webp'],
+  ['Ilusão — rato e gato', 'art/real-05-ilusao.webp'],
+  ['Penas em cor', 'art/real-07-penas.webp'],
+  ['Retrato — óculos', 'art/real-08-oculos.webp'],
+];
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const mix = (a, b, t) => a + (b - a) * t;
+const ease = t => t * t * (3 - 2 * t);
+const out = t => 1 - (1 - t) ** 3;
+const span = (p, a, b) => clamp((p - a) / (b - a));
+
+/* ---------- renderer ---------- */
+const canvas = $('gl');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+renderer.setClearColor(0, 0);
+renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
+const scene = new THREE.Scene();
+const FOV = 35, camera = new THREE.PerspectiveCamera(FOV, 1, .1, 100);
+
+/* ---------- ribbon path ---------- */
+let path, PATH_L = 1;
+const SAMPLES = 1200, pathP = [], pathT = [];
+const PH0 = -1.5, PH1 = Math.PI * 2 + 1.35;
+function buildPath() {
+  const pts = [];
+  for (let i = 0; i <= 160; i++) {
+    const t = i / 160, ph = mix(PH0, PH1, t), cs = Math.cos(ph), u = 2 * t - 1;
+    const depth = cs > 0 ? 7.6 + 16.4 * cs ** .9 : 7.6 + 2.2 * cs;
+    const edge = .84 + .5 * span(.14 - t, 0, .14) + .8 * span(t, .84, 1);
+    pts.push(new THREE.Vector3(edge * Math.sin(ph) * depth * .561, .5 * Math.sign(u) * Math.abs(u) ** 1.4 * depth * .63, -depth));
+  }
+  path = new THREE.CatmullRomCurve3(pts, false, 'centripetal');
+  path.arcLengthDivisions = 1500;
+  PATH_L = path.getLength(); pathP.length = pathT.length = 0;
+  for (let i = 0; i <= SAMPLES; i++) { const u = i / SAMPLES; pathP.push(path.getPointAt(u)); pathT.push(path.getTangentAt(u)); }
+}
+const at = (s, op, ot) => {
+  const f = clamp(s / PATH_L) * SAMPLES, i = Math.min(SAMPLES - 1, Math.floor(f)), k = f - i;
+  op.lerpVectors(pathP[i], pathP[i + 1], k); ot.lerpVectors(pathT[i], pathT[i + 1], k).normalize();
+};
+
+/* ---------- cards ---------- */
+const CARD_W = 2.1, CARD_H = 1.32, GAP = .03, STEP = CARD_W + GAP, NX = 28, NY = 3;
+const vs = `varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`;
+const fs = `uniform sampler2D map;uniform vec2 cover;uniform float aspect,ready,radius;varying vec2 vUv;
+void main(){
+  vec2 q=(abs(vUv-.5)-.5)*vec2(aspect,1.)+radius;
+  float d=length(max(q,0.))+min(max(q.x,q.y),0.)-radius;
+  float px=fwidth(d),a=1.-smoothstep(-px,px,d);
+  if(a<.01)discard;
+  vec2 uv=vUv;if(!gl_FrontFacing)uv.x=1.-uv.x;
+  vec3 c=mix(vec3(.075),texture2D(map,(uv-.5)*cover+.5).rgb,ready);
+  float edge=smoothstep(-.012-px,-.012,d);
+  gl_FragColor=vec4(mix(c,vec3(1.),edge*.1),a);
+}`;
+const loader = new THREE.TextureLoader();
+loader.setCrossOrigin('anonymous');
+const cards = WORK.map(([title, src], i) => {
+  const tex = loader.load(src, () => {
+    const img = tex.image, va = img.width / img.height, ca = CARD_W / CARD_H;
+    mat.uniforms.cover.value.set(va > ca ? ca / va : 1, va > ca ? 1 : va / ca);
+    mat.uniforms.ready.value = 1;
+  });
+  tex.colorSpace = THREE.NoColorSpace; tex.minFilter = THREE.LinearFilter; tex.magFilter = THREE.LinearFilter; tex.generateMipmaps = false;
+  const geo = new THREE.PlaneGeometry(1, 1, NX, NY);
+  const mat = new THREE.ShaderMaterial({vertexShader:vs, fragmentShader:fs, transparent:true, side:THREE.DoubleSide,
+    uniforms:{map:{value:tex}, cover:{value:new THREE.Vector2(1, 1)}, aspect:{value:CARD_W / CARD_H}, ready:{value:0}, radius:{value:.018}}});
+  const mesh = new THREE.Mesh(geo, mat); mesh.frustumCulled = false; scene.add(mesh);
+  return {i, title, tex, geo, mat, mesh, rect:null};
+});
+
+/* ---------- layout ---------- */
+const GZ = 8;
+let W = 1, H = 1, asp = 1, cols = 3, rows = 2, tanH = .3153, lastP = NaN;
+function resize() {
+  W = innerWidth; H = innerHeight; asp = W / H;
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); renderer.setSize(W, H, false);
+  camera.aspect = asp; camera.fov = asp < 16 / 9 ? Math.atan(.561 / asp) * 360 / Math.PI : FOV; camera.updateProjectionMatrix();
+  tanH = Math.tan(camera.fov * Math.PI / 360);
+  cols = asp < .9 ? 2 : 3; rows = asp < .9 ? 3 : 2;
+  lastP = NaN;
+}
+addEventListener('resize', resize); resize(); buildPath();
+function grid(i) {
+  const vh = 2 * GZ * tanH, vw = vh * asp, gw = vw * (cols === 3 ? .74 : .88), gap = gw * .017;
+  const cw = (gw - gap * (cols - 1)) / cols, ch = cw / (CARD_W / CARD_H), gh = ch * rows + gap * 1.6 * (rows - 1);
+  const c = i % cols, r = Math.floor(i / cols);
+  return {x:-gw / 2 + cw / 2 + c * (cw + gap), y:gh / 2 - ch / 2 - r * (ch + gap * 1.6), w:cw, h:ch, vw, vh, c, r};
+}
+
+/* ---------- scroll ---------- */
+let target = 0, p = 0;
+const readScroll = () => { const t = $('track'); target = clamp(scrollY / (t.offsetHeight - innerHeight)); };
+addEventListener('scroll', readScroll, {passive:true}); readScroll();
+
+/* ---------- pose ---------- */
+const op = new THREE.Vector3(), ot = new THREE.Vector3(), up = new THREE.Vector3(), Y = new THREE.Vector3(0, 1, 0), vp = new THREE.Vector3();
+function poseRibbon(c, head) {
+  const pos = c.geo.attributes.position, centre = head - c.i * STEP;
+  for (let iy = 0; iy <= NY; iy++) for (let ix = 0; ix <= NX; ix++) {
+    const k = iy * (NX + 1) + ix, lu = ix / NX - .5, lv = .5 - iy / NY;
+    at(centre + lu * CARD_W, op, ot);
+    up.copy(Y).addScaledVector(ot, -Y.dot(ot)).normalize();
+    vp.copy(op).addScaledVector(up, lv * CARD_H);
+    pos.setXYZ(k, vp.x, vp.y, vp.z);
+  }
+  pos.needsUpdate = true;
+}
+function poseGrid(c, q) {
+  const g = grid(c.i), pos = c.geo.attributes.position;
+  const dx = (g.c - (cols - 1) / 2) * 1.2, dy = g.r < rows / 2 ? 1 : -1;
+  const ox = dx * g.vw * .62 * (1 - q), oy = dy * g.vh * (g.c === 1 ? .95 : .34) * (1 - q), tilt = (1 - q) * .22 * (g.c - 1 || .5) * dy;
+  const cs = Math.cos(tilt), sn = Math.sin(tilt);
+  for (let iy = 0; iy <= NY; iy++) for (let ix = 0; ix <= NX; ix++) {
+    const k = iy * (NX + 1) + ix, x = (ix / NX - .5) * g.w, y = (.5 - iy / NY) * g.h;
+    pos.setXYZ(k, g.x + ox + x * cs - y * sn, g.y + oy + x * sn + y * cs, -GZ - (1 - q) * .6 * Math.sin(ix / NX * Math.PI));
+  }
+  pos.needsUpdate = true;
+  c.rect = g;
+}
+
+const RIB_A = .14, RIB_B = .63;
+function render() {
+  const pp = p;
+  const rise = 1 - out(span(pp, 0, .12));
+  const run = mix(-50, 76, span(pp, 0, .58));
+  $('l1').style.transform = `translate3d(${run}vw,${rise * 34}vh,0)`;
+  $('l2').style.transform = `translate3d(${-run}vw,${rise * 34}vh,0)`;
+  $('cap').style.opacity = 1 - span(pp, .52, .57);
+  $('cap').style.transform = `translate(-50%,calc(-50% + ${rise * 34}vh))`;
+  const intro = 1 - span(pp, 0, .05);
+  for (const id of ['hint', 'cross', 'glow']) $(id).style.opacity = intro;
+  $('rule').style.transform = `scaleX(${ease(span(pp, .72, .86))})`;
+  const pr = span(pp, RIB_A, RIB_B), head = mix(0, PATH_L + cards.length * STEP, pr);
+  for (const c of cards) {
+    const s = head - c.i * STEP, end = PATH_L - CARD_W;
+    if (s < end) {
+      c.mesh.visible = s > CARD_W; c.rect = null;
+      if (c.mesh.visible) poseRibbon(c, head);
+    } else if (c.i < cols * rows) {
+      const st = mix(RIB_A, RIB_B, (end + c.i * STEP) / (PATH_L + cards.length * STEP)), q = out(span(pp, st, st + .13));
+      c.mesh.visible = q > .001;
+      if (c.mesh.visible) poseGrid(c, q);
+    } else { c.mesh.visible = false; c.rect = null; }
+  }
+  renderer.render(scene, camera);
+}
+
+/* ---------- hover ---------- */
+const nameEl = $('name');
+$('stage').addEventListener('pointermove', e => {
+  let hit = null;
+  if (p > .86) {
+    const nx = e.clientX / W - .5, ny = .5 - e.clientY / H;
+    for (const c of cards) {
+      const g = c.rect; if (!g) continue;
+      const x = nx * g.vw, y = ny * g.vh;
+      if (Math.abs(x - g.x) < g.w / 2 && Math.abs(y - g.y) < g.h / 2) hit = c;
+    }
+  }
+  nameEl.style.opacity = hit ? 1 : 0;
+  if (hit) { nameEl.textContent = hit.title; nameEl.style.transform = `translate(${e.clientX + 14}px,${e.clientY + 16}px)`; }
+});
+
+/* ---------- loop ---------- */
+function loop() {
+  p += (target - p) * .09;
+  if (Math.abs(target - p) < .00005) p = target;
+  if (p !== lastP) { render(); lastP = p; }
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* reveal on scroll */
+const io = new IntersectionObserver(entries => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, {rootMargin: '0px 0px -8% 0px', threshold: .12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+</script>
+<script>
+/* área 2 — mãos em dot-matrix (canvas) */
+(function () {
+  var sec = document.getElementById('maos'), cv = document.getElementById('dots');
+  if (!sec || !cv || !cv.getContext) return;
+  var g = cv.getContext('2d');
+  var SRC = { LA: [0, .06, .47, .40], RA: [.53, .06, .47, .40], LB: [0, .55, .47, .40], RB: [.53, .55, .47, .40] };
+  var LOOP = 20, LEVELS = [0, .26, .52, .78, 1];
+  var W = 1, H = 1, DPR = 1, step = 8, rowStep = 16, cols = 1, rows = 1, R = 4, portrait = false, tileAspect = .4813;
+  var tiles = null, seeds = null, fA = null, fB = null, dA = null, dB = null;
+  var acc = 0, last = 0, visible = false;
+
+  function hash(a, b) { var s = Math.sin(a * 127.1 + b * 311.7) * 43758.5453; return s - Math.floor(s); }
+  function cl(v, a, b) { return v < a ? a : (v > b ? b : v); }
+  function sm(a, b, x) { var t = cl((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); }
+  function mixAt(t, on, off, dur) { return sm(on, on + dur, t) * (1 - sm(off, off + dur, t)); }
+
+  function field() {
+    var c = document.createElement('canvas');
+    c.width = cols; c.height = rows;
+    var x = c.getContext('2d', { willReadFrequently: true });
+    x.imageSmoothingEnabled = true; x.imageSmoothingQuality = 'high';
+    return { c: c, x: x };
+  }
+
+  function layout() {
+    W = Math.max(1, sec.clientWidth || window.innerWidth);
+    H = Math.max(1, sec.clientHeight || window.innerHeight);
+    DPR = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+    step = Math.max(4, W / 300); rowStep = step * 1.15;
+    cols = Math.ceil(W / step); rows = Math.ceil(H / rowStep); R = step * .6;
+    portrait = H > W;
+    seeds = new Float32Array(cols * rows);
+    for (var j = 0; j < rows; j++) for (var i = 0; i < cols; i++) seeds[j * cols + i] = .55 * hash(i, j) + .45 * hash(j * 3.1, 7.7);
+    fA = field(); fB = field();
+  }
+
+  function hand(x, a, key, left) {
+    var ph = left ? 0 : Math.PI;
+    var reach = (.035 * Math.sin(a + ph) + .012 * Math.sin(2 * a + 1.3 + ph)) * W;
+    var sc = 1 + .07 * Math.sin(a + .9 + ph);
+    var rot = (left ? 1 : -1) * .045 * Math.sin(a + 2.1 + ph);
+    var hw = W * (portrait ? .95 : .68), hh = hw * (portrait ? .8 : .52), cy = H * (portrait ? .62 : .63);
+    var px = left ? 0 : W;
+    var hx = left ? W * .42 - hw * .95 + reach : W * .58 - hw * .05 - reach;
+    x.globalCompositeOperation = 'darken';
+    x.setTransform(cols / W, 0, 0, rows / H, 0, 0);
+    x.translate(px, cy); x.rotate(rot); x.scale(sc, sc); x.translate(-px, -cy);
+    x.drawImage(tiles[key], hx, cy - hh / 2, hw, hh);
+    x.globalCompositeOperation = 'source-over';
+  }
+
+  function pose(f, a, keys) {
+    var x = f.x;
+    x.setTransform(1, 0, 0, 1, 0, 0);
+    x.fillStyle = '#fff'; x.fillRect(0, 0, cols, rows);
+    hand(x, a, keys[0], true);
+    hand(x, a, keys[1], false);
+  }
+
+  function render(t) {
+    var a = 2 * Math.PI * t / LOOP;
+    pose(fA, a, ['LA', 'RA']);
+    pose(fB, a, ['LB', 'RB']);
+    dA = fA.x.getImageData(0, 0, cols, rows).data;
+    dB = fB.x.getImageData(0, 0, cols, rows).data;
+    var tick = Math.floor(t * 7);
+    var mL = mixAt(t, 6.2, 14.6, 1.6), mR = mixAt(t, 2.4, 10.4, 1.6);
+    var qc = portrait ? .38 : .385, qw = portrait ? .5 : .26;
+    g.setTransform(DPR, 0, 0, DPR, 0, 0);
+    g.clearRect(0, 0, W, H);
+    g.fillStyle = '#f4f1ea';
+    for (var j = 0; j < rows; j++) {
+      var shift = hash(j, tick) > .965 ? Math.round((hash(tick, j) - .5) * 8) : 0;
+      var yy = (j + .5) * rowStep, ey = (yy / H - qc) / .085;
+      for (var i = 0; i < cols; i++) {
+        var m = i < cols / 2 ? mL : mR;
+        var seed = seeds[j * cols + i];
+        var ii = cl(i - shift, 0, cols - 1), k = (j * cols + ii) * 4;
+        var lum = (seed < m ? dB : dA)[k] / 255;
+        var v = cl((1 - lum - .06) / .28, 0, 1);
+        if (v <= .001) continue;
+        v *= .94 + .06 * Math.sin(t * 3.2 + seed * 40);
+        var cx = Math.abs((i + .5) / cols - .5);
+        v *= sm(.035, .11, cx);
+        var ex = cx / qw;
+        v *= sm(.85, 1.25, Math.sqrt(ex * ex + ey * ey));
+        if (m > .001 && m < .999) {
+          var d = Math.abs(seed - m);
+          if (d < .12) { v *= d / .12; if (hash(i + tick, j) <= .4) v *= .3; }
+        }
+        var lv = 0;
+        for (var q = LEVELS.length - 1; q >= 1; q--) if (v >= LEVELS[q] - .1) { lv = LEVELS[q]; break; }
+        if (!lv) continue;
+        var rad = R * (lv === LEVELS[1] ? .38 : lv);
+        g.beginPath(); g.arc((i + .5) * step, yy, rad, 0, 6.2832); g.fill();
+      }
+    }
+  }
+
+  var lastDraw = 0;
+  function loop(now) {
+    var dt = last ? Math.min(64, now - last) : 16; last = now;
+    if (visible) acc += dt / 1000;
+    if (visible && tiles && now - lastDraw > 30) { lastDraw = now; render(acc % LOOP); }
+    requestAnimationFrame(loop);
+  }
+
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function () {
+    var iw = img.naturalWidth, ih = img.naturalHeight;
+    tiles = {};
+    for (var k in SRC) {
+      var r = SRC[k], tw = 560, th = Math.round(560 * (r[3] * ih) / (r[2] * iw));
+      var c = document.createElement('canvas'); c.width = tw; c.height = th;
+      var x = c.getContext('2d'); x.imageSmoothingQuality = 'high';
+      x.drawImage(img, r[0] * iw, r[1] * ih, r[2] * iw, r[3] * ih, 0, 0, tw, th);
+      tiles[k] = c;
+    }
+    tileAspect = (.40 * ih) / (.47 * iw);
+    layout();
+    requestAnimationFrame(loop);
+  };
+  img.src = 'art/maos.webp';
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: .01 }).observe(sec);
+  } else { visible = true; }
+
+  var rt;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(layout, 150); });
+})();
+</script>
+</body>
+</html>
